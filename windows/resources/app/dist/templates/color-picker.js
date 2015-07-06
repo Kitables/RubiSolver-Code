@@ -1,0 +1,3 @@
+var Handlebars = require("handlebars");module.exports = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<a data-color=\"RED\" href=\"#\" class=\"cubie cubie-red cubie-picker selected\"></a>\r\n<a data-color=\"ORANGE\" href=\"#\" class=\"cubie cubie-orange cubie-picker\"></a>\r\n<a data-color=\"YELLOW\" href=\"#\" class=\"cubie cubie-yellow cubie-picker\"></a>\r\n<a data-color=\"GREEN\" href=\"#\" class=\"cubie cubie-green cubie-picker\"></a>\r\n<a data-color=\"BLUE\" href=\"#\" class=\"cubie cubie-blue cubie-picker\"></a>\r\n<a data-color=\"WHITE\" href=\"#\" class=\"cubie cubie-white cubie-picker\"></a>\r\n";
+},"useData":true});

@@ -1,0 +1,124 @@
+@import "color";
+@import "util";
+
+.cubie {
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    border: 2px solid $white;
+
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+}
+
+@mixin cubie-letter($letter) {
+    content: $letter;
+    color: $white;
+
+    position: absolute;
+    right: 2px;
+    bottom: -1px;
+
+    font-size: 14px;
+}
+
+.cubie-blank {
+    background-color: $gray;
+}
+
+.cubie-red {
+    background-color: $cubie-red;
+
+    &::before {
+        @include cubie-letter('R');
+    }
+}
+
+.cubie-orange {
+    background-color: $cubie-orange;
+
+    &::before {
+        @include cubie-letter('O');
+    }
+}
+
+.cubie-yellow {
+    background-color: $cubie-yellow;
+
+    &::before {
+        @include cubie-letter('Y');
+    }
+}
+
+.cubie-green {
+    background-color: $cubie-green;
+
+    &::before {
+        @include cubie-letter('G');
+    }
+}
+
+.cubie-blue {
+    background-color: $cubie-blue;
+
+    &::before {
+        @include cubie-letter('B');
+    }
+}
+
+.cubie-white {
+    background-color: $cubie-white;
+
+    &::before {
+        @include cubie-letter('W');
+        color: $black;
+    }
+}
+
+.cubie-picker {
+    width: 25px;
+    height: 25px;
+
+    float: left;
+    margin-right: 10px;
+
+    &.selected, &:hover {
+        border: 2px solid $black;
+    }
+}
+
+.cube {
+    padding: 20px 0 20px 0;
+
+    .side-row {
+        margin-bottom: 10px;
+        @extend .clearfix;
+
+        .side {
+            float: left;
+            margin-right: 10px;
+
+            &::last-child {
+                margin-right: 0;
+            }
+
+            &.offset {
+                margin-left: 115px;
+            }
+
+            .row {
+                @extend .clearfix;
+
+                margin-bottom: 3px;
+
+                .cubie {
+                    float: left;
+
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}

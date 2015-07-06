@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="dist/css/main.css">
+        <script src="dist/js/main.js"></script>
+
+        <title>Rubisolver</title>
+    </head>
+
+    <body>
+        <div id="messages" class="messages"></div>
+
+        <div class="left column-left">
+            <h1>
+                <i class="fa fa-cube"></i>
+                CUBE
+                <span class="sub">
+                    Fill in the colors on your cube
+                </span>
+            </h1>
+
+            <div class="content">
+                <div class="color-pickers clearfix">
+                    <span class="pickers"></span>
+
+                    <div class="button-area" id="cube_controls">
+                        <button class="button bad" id="clear">
+                            <i class="fa fa-times"></i>
+                            CLEAR
+                        </button>
+
+                        <button href="#" class="button ok" id="solve">
+                            <i class="fa fa-gear"></i>
+                            <span class="text">SOLVE</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cube">
+                </div>
+            </div>
+        </div>
+
+        <div class="right column-right rubisolver">
+            <h1>
+                <i class="fa fa-puzzle-piece"></i>
+                RUBISOLVER
+            </h1>
+
+            <div class="content">
+                <div id="detector" class="detector">
+                </div>
+
+<!--                 <div class="calibrator">
+                    <h2>Calibration</h2>
+                </div> -->
+
+                <div id="comm" class="comm">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

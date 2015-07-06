@@ -1,0 +1,64 @@
+@import "partials/reset";
+
+@import "lib/font-awesome";
+
+@import "partials/color";
+@import "partials/size";
+@import "partials/font";
+
+@import "partials/util";
+@import "partials/ui";
+
+@import "partials/cubie";
+@import "partials/rubisolver";
+
+/* MAIN */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $white;
+    font-family: 'Josefin Sans', sans-serif;
+
+    padding: 20px;
+    color: $text-color;
+
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 28px;
+
+    border-bottom: 1px solid $text-color;
+
+    .sub {
+        font-size: 20px;
+    }
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* COLUMNS */
+
+.column-left {
+    width: 515px;
+    height: $column-height;
+}
+
+.column-right {
+    width: 220px;
+    height: $column-height;
+}
+
+.content {
+    padding: 15px;
+    background-color: $lighter-gray;
+    height: 100%;
+}

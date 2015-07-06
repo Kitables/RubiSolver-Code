@@ -1,0 +1,3 @@
+var Handlebars = require("handlebars");module.exports = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<i class=\"fa fa-times-circle status-icon bad\"></i>\r\n\r\n<p>Couldn't find Rubisolver</p>\r\n<button class=\"search-button button ok\">\r\n    <i class=\"fa fa-search\"></i>\r\n    LOOK AGAIN\r\n</button>\r\n";
+},"useData":true});
