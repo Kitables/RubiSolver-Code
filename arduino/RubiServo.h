@@ -26,7 +26,7 @@ public:
   RubiServo();
   ~RubiServo();
   
-  virtual void init() = 0;
+  virtual void init(bool reverse) = 0;
   bool ready();
 
   void attach(unsigned short pin);

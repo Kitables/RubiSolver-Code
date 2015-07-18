@@ -4,8 +4,8 @@ BaseServo::BaseServo()
 : RubiServo() {
 }
 
-void BaseServo::init() {
-    this->rotated = false;
+void BaseServo::init(bool reverse) {
+    this->rotated = reverse;
     this->move_to(BASE_NO_TURN);
     delay(1000);
 }

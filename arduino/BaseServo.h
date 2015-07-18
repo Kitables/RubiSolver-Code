@@ -15,7 +15,7 @@ private:
 public:
   BaseServo();
 
-  virtual void init();
+  virtual void init(bool reverse);
   void turn();
 };
 

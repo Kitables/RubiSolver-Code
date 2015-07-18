@@ -5,12 +5,14 @@
 #define BASE_PIN 5
 #define ARM_PIN 6
 
+bool SERVO_REVERSE = false;
+
 Comm comm;
 ServoControl servo_control;
 
 void setup() {
   Serial.begin(115200);
-  servo_control.init(BASE_PIN, ARM_PIN);
+  servo_control.init(BASE_PIN, ARM_PIN, SERVO_REVERSE);
 }
 
 void loop() {

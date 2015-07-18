@@ -4,11 +4,13 @@ ServoControl::ServoControl() {
     this->reset();
 }
 
-void ServoControl::init(unsigned short base_pin, unsigned short arm_pin) {
+void ServoControl::init(unsigned short base_pin, unsigned short arm_pin, bool reverse) {
+  this->reverse = reverse;
+
   this->attach(base_pin, arm_pin);
   
-  this->base.init();
-  this->arm.init();
+  this->base.init(reverse);
+  this->arm.init(reverse);
   delay(1000);
 }
 
@@ -64,8 +66,8 @@ void ServoControl::update() {
       this->execute_action(this->action_queue[this->action_ptr++]);
     } else if (this->action_ptr == this->action_queue_length) {
       this->reset();
-      this->arm.init();
-      this->base.init();
+      this->arm.init(this->reverse);
+      this->base.init(this->reverse);
     }
 
     this->base.update();

@@ -4,16 +4,15 @@
 #include <Servo.h>
 #include "RubiServo.h"
 
-const int ARM_OFF = 1000;
-const int ARM_HOLD = 1300;
-const int ARM_PUSH = 3200;
-
 class ArmServo : public RubiServo {
 private:
+  int ARM_OFF;
+  int ARM_HOLD;
+  int ARM_PUSH;
 public:
   ArmServo();
 
-  virtual void init();
+  virtual void init(bool reverse);
   void off();
   void hold();
   void push();

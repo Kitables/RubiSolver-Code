@@ -120,7 +120,7 @@ module.exports = {
 
         var buffer = new Buffer(totalLen);
         buffer.write(this.COMMAND_INSTRUCTIONS, 0, 1);
-        buffer.writeIntLE(instructions.length, 1, 1);
+        buffer.writeUIntLE(instructions.length, 1, 1);
         buffer.write(instructions, 2, instructions.length);
 
         var deferred = q.defer();

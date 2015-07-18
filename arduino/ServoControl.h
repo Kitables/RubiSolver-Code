@@ -20,6 +20,7 @@ enum ServoAction {
 
 class ServoControl {
 private:
+    bool reverse;
     BaseServo base;
     ArmServo arm;
     
@@ -31,7 +32,7 @@ private:
     bool ready;
 public:
     ServoControl();
-    void init(unsigned short base_pin, unsigned short arm_pin);
+    void init(unsigned short base_pin, unsigned short arm_pin, bool reverse);
     void reset();
 
     void attach(unsigned short base_pin, unsigned short arm_pin);
